@@ -1,4 +1,4 @@
-'''
+
 x = 35e3
 y = 12E4
 z = -87.7e100
@@ -77,7 +77,7 @@ print(b[2:])
 
 b = "Hello, World!"
 print(b[-5:-2])
-'''
+
 
 a = "Hello, World!"
 print(a.upper())
