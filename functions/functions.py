@@ -1,6 +1,11 @@
-def greet(name, greeting, /):
-    print(greeting, name)
+def evenOdd(x):
+    """Function to check if the number is even or odd"""
+    
+    if (x % 2 == 0):
+        print("even")
+    else:
+        print("odd")
 
 
-greet("John", "Hello")
-greet( "Hello", "John")
+# Driver code to call the function
+print(evenOdd.__doc__)

@@ -68,6 +68,16 @@ def my_function(**kid):
 my_function(fname = "Tobias", lname = "Refsnes")
 ```
 
+```python
+def myFun(**kwargs):
+    for key, value in kwargs.items():
+        print("%s == %s" % (key, value))
+
+
+# Driver code
+myFun(first='Geeks', mid='for', last='Geeks')
+```
+
 ## Default Parameter Value
 The following example shows how to use a default parameter value.
 
@@ -197,4 +207,75 @@ def tri_recursion(k):
 
 print("\n\nRecursion Example Results")
 tri_recursion(6)
+```
+
+## Docstring
+
+The first string after the function is called the Document string or Docstring in short. This is used to describe the functionality of the function. The use of docstring in functions is optional but it is considered a good practice.
+
+The below syntax can be used to print out the docstring of a function.
+
+> Syntax: print(function_name.\_\_doc\_\_)
+
+```python
+def evenOdd(x):
+    """Function to check if the number is even or odd"""
+    
+    if (x % 2 == 0):
+        print("even")
+    else:
+        print("odd")
+
+
+# Driver code to call the function
+print(evenOdd.__doc__)
+```
+
+## Python Function within Functions
+
+A function that is defined inside another function is known as the inner function or nested function. Nested functions can access variables of the enclosing scope. Inner functions are used so that they can be protected from everything happening outside the function.
+
+```python
+# Python program to
+# demonstrate accessing of
+# variables of nested functions
+
+def f1():
+    s = 'I love GeeksforGeeks'
+    
+    def f2():
+        print(s)
+        
+    f2()
+
+# Driver's code
+f1()
+```
+
+## Anonymous Functions in Python
+In Python, an anonymous function means that a function is without a name. As we already know the def keyword is used to define the normal functions and the lambda keyword is used to create anonymous functions.
+
+```python
+def cube(x): return x*x*x
+
+cube_v2 = lambda x : x*x*x
+
+print(cube(7))
+print(cube_v2(7))
+```
+
+## Pass by Reference and Pass by Value
+One important thing to note is, in Python every variable name is a reference. When we pass a variable to a function Python, a new reference to the object is created. Parameter passing in Python is the same as reference passing in Java.
+
+```python
+# Here x is a new reference to same list lst
+def myFun(x):
+    x[0] = 20
+
+
+# Driver Code (Note that lst is modified
+# after function call.
+lst = [10, 11, 12, 13, 14, 15]
+myFun(lst)
+print(lst)
 ```
